@@ -1,4 +1,17 @@
-# CI/CD Tools and Practices Final Project Template
+# Counter Service — CI/CD Final Project
+
+[![CI workflow](https://github.com/PruthviChaudharii/ci-cd-final-project/actions/workflows/workflow.yml/badge.svg)](https://github.com/PruthviChaudharii/ci-cd-final-project/actions/workflows/workflow.yml)
+
+Project owner: PruthviChaudharii. This project automates linting, unit testing,
+image building, and OpenShift deployment of the Python Flask counter service.
+GitHub Actions runs flake8 followed by nose tests. Tekton uses cleanup,
+git-clone, flake8, nose, buildah, and deployment tasks with a dedicated 1 GiB PVC.
+The service runs on port 8000 and exposes `/health` and `/counters` endpoints.
+
+The application and tests originate from the Apache-2.0 licensed
+[IBM starter repository](https://github.com/ibm-developer-skills-network/vselh-ci-cd-final-project-template).
+The completed workflow is in `.github/workflows/workflow.yml`, and custom
+cleanup and test tasks are in `.tekton/tasks.yml`.
 
 This repository contains the template to be used for the Final Project for the Coursera course **CI/CD Tools and Practices**.
 
